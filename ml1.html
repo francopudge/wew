@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kristiadi Store</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+        color: #003344;
+      }
+
+      /* Sticky Atas dan Bawah - nuansa air */
+      .sticky-box,
+      .sticky-bottom {
+        position: fixed;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to right, #00bcd4, #1e88e5);
+        color: white;
+        padding: 0 60px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+      }
+
+      .sticky-box {
+        top: 0;
+      }
+
+      .sticky-bottom {
+        bottom: 0;
+        box-shadow: 0 -4px 10px rgba(0, 123, 255, 0.3);
+      }
+
+      .sticky-box img,
+      .sticky-bottom img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 40px;
+      }
+
+      .sticky-box img.left,
+      .sticky-bottom img.left {
+        left: 10px;
+      }
+
+      .sticky-box img.right,
+      .sticky-bottom img.right {
+        right: 10px;
+      }
+
+      .sticky-box button {
+        margin: 0 10px;
+        padding: 10px 20px;
+        border: none;
+        background-color: white;
+        color: #0288d1;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.3s;
+        z-index: 1;
+      }
+
+      .sticky-box button:hover {
+        background-color: #b2ebf2;
+        transform: scale(1.05);
+      }
+
+      .content {
+        margin-top: 100px;
+        padding: 20px;
+        padding-bottom: 100px;
+        text-align: center;
+      }
+
+      .content p {
+        line-height: 1.6;
+      }
+
+      .wa-link img {
+        height: 40px;
+        transition: 0.3s ease;
+      }
+
+      .wa-link img:hover {
+        opacity: 0.8;
+        transform: scale(1.1);
+      }
+
+      /* Ukuran gambar hero */
+      .heroImage {
+        max-width: 300px;
+        height: auto;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 188, 212, 0.4);
+        display: block;
+      }
+
+      /* Garis pembatas full layar */
+      .divider {
+        position: relative;
+        left: 50%;
+        width: 100vw;
+        margin: 40px 0;
+        border-top: 3px solid #0288d1;
+        opacity: 0.6;
+        margin-left: -50vw;
+      }
+    </style>
+  </head>
+  <link rel="icon" href="bane.png" type="image/png" />
+  <body>
+    <!-- Sticky Atas -->
+    <div class="sticky-box">
+      <img src="bane.png" alt="Bane kiri atas" class="left" />
+      <button onclick="window.location.href='index.html'">Home</button>
+      <img src="bane.png" alt="Bane kanan atas" class="right" />
+    </div>
+
+    <!-- Konten -->
+    <div class="content">
+      <!-- Gambar Alice di atas -->
+      <img src="alice1.png" alt="Alice" class="heroImage" />
+
+      <!-- Garis pembatas -->
+      <div class="divider"></div>
+
+      <!-- Gambar Tigreal di bawah -->
+      <img src="tigreal1.png" alt="Tigreal" class="heroImage" />
+    </div>
+
+    <!-- Sticky Bawah -->
+    <div class="sticky-bottom">
+      <img src="bane.png" alt="Bane kiri bawah" class="left" />
+      <a href="https://wa.me/6285772771373" target="_blank" class="wa-link">
+        <img src="wa.png" alt="WhatsApp" />
+      </a>
+      <img src="bane.png" alt="Bane kanan bawah" class="right" />
+    </div>
+
+    <!-- Script Gambar Bergantian -->
+    <script></script>
+  </body>
+</html>
